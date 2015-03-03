@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>carnetAdresse</display-name>
+  <welcome-file-list>
+    <welcome-file>main</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>MainServlet</display-name>
+    <servlet-name>MainServlet</servlet-name>
+    <servlet-class>servlets.controllers.MainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MainServlet</servlet-name>
+    <url-pattern>/main/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShowServlet</display-name>
+    <servlet-name>ShowServlet</servlet-name>
+    <servlet-class>servlets.views.ShowServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowServlet</servlet-name>
+    <url-pattern>/ShowServlet/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShowList</display-name>
+    <servlet-name>ShowList</servlet-name>
+    <servlet-class>servlets.views.ShowList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowList</servlet-name>
+    <url-pattern>/showList</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShowForm</display-name>
+    <servlet-name>ShowForm</servlet-name>
+    <servlet-class>servlets.views.ShowForm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowForm</servlet-name>
+    <url-pattern>/showForm</url-pattern>
+  </servlet-mapping>
+</web-app>
