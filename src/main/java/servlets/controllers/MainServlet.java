@@ -104,28 +104,20 @@ public class MainServlet extends HttpServlet {
 		String annulation = request.getParameter("annulation");	
 		boolean annuler =  annulation != null && "Annuler".equals(annulation);
 		if (pathInfo != null && !annuler) {
+			String nom = request.getParameter("nom");
+			String prenom = request.getParameter("prenom");
+			String tel = request.getParameter("tel");
+			String rue = request.getParameter("rue");
+			String codePostal = request.getParameter("codePostal");
+			String ville = request.getParameter("ville");
+			String pays = request.getParameter("pays");
+			
 			if (pathInfo.startsWith("/add/")) {
-				String nom = request.getParameter("nom");
-				String prenom = request.getParameter("prenom");
-				String tel = request.getParameter("tel");
-				String rue = request.getParameter("rue");
-				String codePostal = request.getParameter("codePostal");
-				String ville = request.getParameter("ville");
-				String pays = request.getParameter("pays");
-
 				aSL.createAdresse(nom, prenom, tel, rue, codePostal, ville,
 						pays);
-				messages.add("Création d'une adresse");
+				messages.add("CrÃ©ation d'une adresse");
 			} else if (pathInfo.startsWith("/edit/")) {
 				int id = Integer.parseInt(request.getParameter("id"));
-				String nom = request.getParameter("nom");
-				String prenom = request.getParameter("prenom");
-				String tel = request.getParameter("tel");
-				String rue = request.getParameter("rue");
-				String codePostal = request.getParameter("codePostal");
-				String ville = request.getParameter("ville");
-				String pays = request.getParameter("pays");
-
 				try {
 					aSL.updateAdresse(id, nom, prenom, tel, rue, codePostal,
 							ville, pays);
